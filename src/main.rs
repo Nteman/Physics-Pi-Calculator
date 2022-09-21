@@ -67,10 +67,6 @@ fn startup_system(
     // Add 2D Camera
     commands.spawn_bundle(Camera2dBundle::default());
 
-    // let clack = Clack {
-    //     clack: asset_server.load("clack2.mp3")
-    // };
-
     //Window Size
     let window = windows.get_primary().unwrap();
     let (win_width, win_height) = (window.width(), window.height());
@@ -156,7 +152,7 @@ fn startup_system(
         .insert(CollisionText {});
 
     
-    // Insert the window, 'clack' resource 
+    // Insert the window resource 
     commands.insert_resource(win_size);
 }
 
